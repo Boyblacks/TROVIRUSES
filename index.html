@@ -5,16 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TROVIRUSES</title>
+
     <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
 
-    <main id="app">
-        <h1>TROVIRUSES</h1>
-        <p>Application initialized.</p>
-    </main>
+    <!-- Global Application -->
+    <div id="app">
 
+        <!-- Global Background -->
+        <div id="app-background" aria-hidden="true"></div>
+
+        <!-- Main Application Content -->
+        <main id="app-content">
+
+            <!-- Sections will be mounted here -->
+            <section
+                id="home-section"
+                class="app-section active-section"
+                data-section="home"
+            >
+                <div class="section-placeholder">
+                    <h1>TROVIRUSES</h1>
+                    <p>Home</p>
+                </div>
+            </section>
+
+            <section
+                id="worlds-section"
+                class="app-section"
+                data-section="worlds"
+                hidden
+            >
+                <div class="section-placeholder">
+                    <h1>Worlds</h1>
+                </div>
+            </section>
+
+            <section
+                id="others-section"
+                class="app-section"
+                data-section="others"
+                hidden
+            >
+                <div class="section-placeholder">
+                    <h1>Others</h1>
+                </div>
+            </section>
+
+            <section
+                id="sidebar-section"
+                class="app-section"
+                data-section="sidebar"
+                hidden
+            >
+                <div class="section-placeholder">
+                    <h1>Side Bar</h1>
+                </div>
+            </section>
+
+            <section
+                id="settings-section"
+                class="app-section"
+                data-section="settings"
+                hidden
+            >
+                <div class="section-placeholder">
+                    <h1>Settings</h1>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav
+            id="bottom-navigation"
+            class="bottom-navigation"
+            aria-label="Main navigation"
+        >
+
+            <button
+                class="nav-item"
+                type="button"
+                data-section="worlds"
+            >
+                <span>Worlds</span>
+            </button>
+
+            <button
+                class="nav-item"
+                type="button"
+                data-section="others"
+            >
+                <span>Others</span>
+            </button>
+
+            <button
+                class="nav-item active"
+                type="button"
+                data-section="home"
+            >
+                <span>Home</span>
+            </button>
+
+            <button
+                class="nav-item"
+                type="button"
+                data-section="sidebar"
+            >
+                <span>Side Bar</span>
+            </button>
+
+            <button
+                class="nav-item"
+                type="button"
+                data-section="settings"
+            >
+                <span>Settings</span>
+            </button>
+
+        </nav>
+
+        <!-- Daily Mood Overlay -->
+        <div
+            id="mood-overlay"
+            class="mood-overlay"
+            hidden
+            aria-hidden="true"
+        >
+
+            <div
+                class="mood-dialog"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="mood-title"
+            >
+
+                <h2 id="mood-title">
+                    How do you feel today?
+                </h2>
+
+                <p>
+                    Choose a number from 1 to 5.
+                </p>
+
+                <div class="mood-picker">
+
+                    <button
+                        type="button"
+                        class="mood-button"
+                        data-mood="1"
+                    >
+                        1
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-button"
+                        data-mood="2"
+                    >
+                        2
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-button"
+                        data-mood="3"
+                    >
+                        3
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-button"
+                        data-mood="4"
+                    >
+                        4
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-button"
+                        data-mood="5"
+                    >
+                        5
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Core -->
     <script src="js/core/events.js"></script>
     <script src="js/core/state.js"></script>
     <script src="js/core/storage.js"></script>
