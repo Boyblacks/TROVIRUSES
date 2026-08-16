@@ -1,3 +1,5 @@
+console.log("TROVIRUSES MOOD.JS LOADED");
+
 /* TROVIRUSES
    Daily Mood Check
 */
