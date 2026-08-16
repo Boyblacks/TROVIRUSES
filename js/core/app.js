@@ -14,6 +14,13 @@
             window.TROVIRUSES.router.init();
         }
 
+        if (
+            window.TROVIRUSES &&
+            window.TROVIRUSES.mood
+        ) {
+            window.TROVIRUSES.mood.init();
+        }
+
         console.log(
             "TROVIRUSES application initialized."
         );
