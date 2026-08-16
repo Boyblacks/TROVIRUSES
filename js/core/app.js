@@ -1,11 +1,33 @@
-// TROVIRUSES
-// Application entry point.
-//
-// This file initializes the application.
-// Feature-specific logic must not be placed here.
+/* TROVIRUSES
+   Application Entry Point
+*/
 
-function initApp() {
-    console.log("TROVIRUSES initialized");
-}
+(function () {
+    "use strict";
 
-document.addEventListener("DOMContentLoaded", initApp);
+    function init() {
+
+        if (
+            window.TROVIRUSES &&
+            window.TROVIRUSES.router
+        ) {
+            window.TROVIRUSES.router.init();
+        }
+
+        console.log(
+            "TROVIRUSES application initialized."
+        );
+    }
+
+    if (
+        document.readyState === "loading"
+    ) {
+        document.addEventListener(
+            "DOMContentLoaded",
+            init
+        );
+    } else {
+        init();
+    }
+
+})();
